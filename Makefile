@@ -14,7 +14,9 @@ generate:
 		echo '#show: body => assignment("Chapter Exercises", "Federico", body)' >> "$$MAIN_FILE"; \
 		echo '' >> "$$MAIN_FILE"; \
 		find "$$dir" -maxdepth 1 -name "ex*.typ" -type f | sort -V | while read -r file; do \
+			echo '#[' >> "$$MAIN_FILE"; \
 			cat "$$file" >> "$$MAIN_FILE"; \
+			echo ']' >> "$$MAIN_FILE"; \
 			echo '' >> "$$MAIN_FILE"; \
 			echo '' >> "$$MAIN_FILE"; \
 		done; \
