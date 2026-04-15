@@ -9,7 +9,7 @@ generate:
 		MAIN_FILE="$${dir}main.typ"; \
 		echo "Generating $$MAIN_FILE..."; \
 		echo '#import "../../template.typ": assignment, problem' > "$$MAIN_FILE"; \
-		echo '#import "@preview/fletcher:0.5.1" as fletcher: diagram, node, edge' >> "$$MAIN_FILE"; \
+		echo '#import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge' >> "$$MAIN_FILE"; \
 		echo '' >> "$$MAIN_FILE"; \
 		echo '#show: body => assignment("Chapter Exercises", "Federico", body)' >> "$$MAIN_FILE"; \
 		echo '' >> "$$MAIN_FILE"; \
