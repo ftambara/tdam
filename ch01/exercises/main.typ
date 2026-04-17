@@ -671,6 +671,20 @@ which includes things like newspapers and so on.
 
 
 #[
+== Exercise 1-22
+
+#problem[
+  How many words are there in this textbook?
+]
+
+This textbook has 800 pages. I've counted around 170 words in what seemed
+like a representative enough page, so around 350 words per page.
+
+This yields an approximate total of $800 * 350 = 35 * 8 * 1000 = 280,000 "words"$.
+]
+
+
+#[
 == Exercise 1-23
 
 #problem[
@@ -710,6 +724,31 @@ A day has 24 hours.
 $ 10^6 / (24 * 3600) = 10^2 / (2.4 * 3.6) = 10^2 / (3 - .6)(3 + .6) = 10^2 / (3^2 - .6^2) = 10^2 / (9 - .36) approx 10^2 / (10 / 1.1) = 11 "days" $
 
 But that was very complicated, so probably I should have just done 240 + 30 which is about 11 days.
+]
+
+
+#[
+== Exercise 1-24
+
+#problem[
+  Estimate how many cities and towns there are in the United States.
+]
+
+Oh god.
+
+The current US population figures state 350 million citizens.
+Let's use the Pareto distribution rule because it seems to work for things like this.
+Say 80% of the people (~70 million) live in the 20% most populous cities.
+Using an estimate of a million people for the top 20% largest urban areas yields 70 cities.
+A million per city is probably too little, but it may not be comparatively important.
+
+Say the average town has 10,000 inhabitants. For 280 million people, that's around
+28,000 towns, making the number of cities largely insignificant.
+
+My final guess is somewhere around 28000 urban areas,
+but I accept I could be off by an order of magnitude either way (probably less).
+
+According to official figures it seems like the number is close to 19,479 urban areas.
 ]
 
 
