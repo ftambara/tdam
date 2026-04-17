@@ -516,22 +516,6 @@ $qed$
 
 
 #[
-== Exercise 1-11
-
-#problem[
-  The greatest common divisor of positive integers $x$ and $y$ is the largest 
-  integer $d$ such that $d$ divides $x$ and $d$ divides $y$. Euclid’s algorithm 
-  to compute $gcd(x, y)$ where $x > y$ reduces the task to a smaller problem:
-  
-  $ gcd(x, y) = gcd(y, x mod y) $
-
-  Prove that Euclid’s algorithm is correct.
-]
-
-]
-
-
-#[
 == Exercise 1-12
 
 #problem[
@@ -562,6 +546,49 @@ $ sum_(i=1)^(k+1) i &= sum_(i=1)^k i + (k+1) \
 $
 
 The general case holds.
+
+$qed$
+]
+
+
+#[
+== Exercise 1-13
+
+#problem[
+  Prove that $sum_(i=1)^n i^2 = (n(n + 1)(2n + 1))/6$ for $n >= 0$, by induction.
+]
+
+
+Let $f(n) := sum_(i=1)^n i^2$ and $g(n) := (n(n + 1)(2n + 1))/6$.
+
+*Proposition*: $f(n) = g(n)$ for $n >= 0$.
+
+=== Proof
+
+==== Base case
+
+Assume $n = 0$. Then $f(0) = g(0) = 0$.
+
+==== Induction case
+
+Assume the proposition holds for all integers $k <= n$. We must prove it for $k = n+1$.
+
+$ f(k+1) = sum_(i=1)^(k+1) i^2 = sum_(i=1)^k i^2 + (k+1)^2 $
+
+By our inductive hypothesis, we can substitute $sum_(i=1)^k i^2$ by $g(k)$.
+Therefore, $f(k+1) &= g(k) + (k+1)^2$. To complete the proof, we must show that
+$f(k+1) = g(k+1)$.
+
+$ g(k+1) = ((k+1)((k+1) + 1)(2(k+1) + 1))/6 = ((k+1) (k+2) (2k+3))/6 $
+
+$ 
+  g(k) + (k+1)^2 &= (k (k+1) (2k+1))/6 + (k+1)^2 \
+                 &= (k (k+1) (2k+1) + 6 (k+1)^2)/6 \
+                 &= ((k+1)/6) (k (2k+1) + 6 (k+1)) \
+                 &= ((k+1)/6) (2k^2 + 7k + 6)) \
+                 &= ((k+1)/6) (k+2) (2k+3) \
+                 &= ((k+1) (k+2) (2k+3))/6 = g(k+1)
+$
 
 $qed$
 ]
